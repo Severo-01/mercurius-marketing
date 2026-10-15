@@ -1,0 +1,16 @@
+PASTA DOS QUADROS DA SEQUÊNCIA DO HERO
+=======================================
+Conteúdo atual: 120 quadros novos (frame_0001.webp ... frame_0120.webp), extraídos de VIDEO_ORIGINAL.mp4
+(1280x720, 15 quadros por segundo, WebP qualidade 80, cerca de 6 MB no total).
+Os 120 ficheiros do zip anterior (frames_VIDEO_ORIGINAL.zip) estavam corrompidos (vazios) e NÃO foram usados.
+
+Para trocar por outros quadros, mantenha:
+- nome  frame_0001.webp, frame_0002.webp, ...  (4 dígitos, numeração contínua a partir de 0001)
+- mesma resolução em todos
+- o total é detetado automaticamente (não é preciso configurar)
+
+Gerar os quadros de novo a partir de um vídeo (ffmpeg):
+    ffmpeg -i VIDEO.mp4 -an -vf "fps=15,scale=1280:720" -c:v libwebp -quality 80 frame_%04d.webp
+
+Se não puder enviar pastas para o GitHub:
+- coloque os quadros soltos na raiz (junto do index.html) e, no topo de sequence.js, mude  dir: "hero-sequence/"  para  dir: "".
