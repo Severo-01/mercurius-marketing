@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mercurius Marketing | Presença digital com estratégia</title>
+<meta name="description" content="A Mercurius Marketing cria landing pages, presença digital e experiências digitais que tornam sua marca mais clara, estratégica e preparada para gerar oportunidades.">
+<meta name="theme-color" content="#05070B">
+<meta property="og:title" content="Mercurius Marketing">
+<meta property="og:description" content="Sua marca merece mais do que estar online. Ela precisa ser percebida.">
+<meta property="og:type" content="website">
+<!-- FAVICON: troque o data URI abaixo pelo caminho do arquivo final (ex.: /favicon.png) -->
+<link rel="icon" type="image/png" href="favicon.png">
+<script>
+/* Animações de scroll em toda a página (scroll.js): ligam-se cedo para não haver "salto" de conteúdo.
+   Ficam desligadas com "reduzir movimento". Se scroll.js falhar, o conteúdo volta a aparecer em 5 s. */
+(function(){var d=document.documentElement,r=false;try{r=matchMedia("(prefers-reduced-motion: reduce)").matches}catch(e){}
+if(!r){d.classList.add("st-on","dia-pending");setTimeout(function(){if(!window.__stReady)d.classList.remove("st-on")},5000);setTimeout(function(){if(!window.__diaReady)d.classList.remove("dia-pending")},2500)}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Fundo cinematográfico: sequência de imagens desenhada aqui e controlada pelo scroll do site todo (sequence.js) -->
+<canvas class="site-canvas" id="siteSeq" aria-hidden="true"></canvas>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="top" id="topo">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Mercurius Marketing — início"><img src="logo-mercurius.webp" alt="Mercurius Marketing" width="58" height="58"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="main" id="menu" aria-label="Principal">
+      <a class="lnk" href="#inicio">Início</a>
+      <a class="lnk" href="#solucoes">Soluções</a>
+      <a class="lnk" href="#como-funciona">Como funciona</a>
+      <a class="lnk" href="#sobre">Sobre</a>
+      <a class="lnk" href="#contato">Contato</a>
+      <a class="btn btn-primary" href="#contato">Solicitar uma proposta</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="hero" id="inicio" aria-label="Apresentação">
+  <!-- ==== VÍDEO DO HERO: loop sem a logo (0–4,3 s do vídeo original, ida e volta para não haver corte no reinício).
+       Para trocar pelo vídeo final, altere os atributos src abaixo (ou o objeto CONFIG.heroVideo no script). ==== -->
+  <img class="poster" id="heroPoster" src="hero-poster.jpg" alt="" aria-hidden="true">
+  <video id="heroVideo" muted playsinline loop preload="metadata" poster="hero-poster.jpg" aria-hidden="true" tabindex="-1">
+    <source src="hero-loop.webm" type="video/webm">
+    <source src="hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="wrap hero-in">
+    <p class="kicker">ESTRATÉGIA • PRESENÇA DIGITAL • CONVERSÃO</p>
+    <h1>Sua marca merece mais do que estar online.<span class="sub">Ela precisa ser percebida.</span></h1>
+    <p class="lead">Criamos experiências digitais que conectam marcas às pessoas, transformando presença online em uma comunicação mais clara, estratégica e preparada para gerar oportunidades.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contato">Solicitar uma proposta</a>
+      <a class="btn btn-ghost" href="#solucoes">Conhecer nossas soluções</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="problema">
+  <div class="wrap problem">
+    <div class="copy">
+      <h2>Estar presente não é o mesmo que ser percebido.</h2>
+      <p>Em um ambiente digital cheio de informações, não basta publicar ou simplesmente existir online. A maneira como uma empresa se apresenta influencia a compreensão de sua proposta, a confiança que transmite e a forma como é lembrada.</p>
+      <p>Uma presença digital bem estruturada ajuda a organizar a comunicação, tornar a oferta mais compreensível e facilitar o próximo passo do cliente.</p>
+    </div>
+    <svg class="noise" id="noise" viewBox="0 0 600 480" role="img" aria-label="Elementos dispersos convergindo para uma estrutura organizada, representando a passagem do ruído para a clareza">
+      <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#36A9F5"/><stop offset="1" stop-color="#C7D2DF"/></linearGradient></defs>
+      <g id="noiseLines"></g>
+      <g class="core"><line x1="300" y1="40" x2="300" y2="440" stroke="#D6AD55" stroke-width="1.2"/><circle cx="300" cy="240" r="5" fill="#D6AD55"/><circle cx="300" cy="240" r="16" fill="none" stroke="#D6AD55" stroke-opacity=".5"/></g>
+      <text class="cap" x="24" y="456">RUÍDO</text><text class="cap" x="576" y="456" text-anchor="end">CLAREZA</text>
+    </svg>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section class="sec" id="solucoes">
+  <div class="wrap">
+    <div class="sol-head">
+      <h2>Soluções para tornar sua marca compreendida.</h2>
+      <p>Cada módulo pode ser contratado de forma independente ou combinado, conforme o objetivo do seu negócio.</p>
+    </div>
+    <div class="sol-grid" id="solGrid"></div>
+  </div>
+</section>
+
+<section class="sec process" id="como-funciona">
+  <div class="wrap">
+    <h2>Um processo claro, do diagnóstico à evolução.</h2>
+    <div class="holo-wrap" id="steps">
+      <div class="holo-floor" aria-hidden="true"></div>
+      <div class="holo-link" aria-hidden="true"></div>
+      <div class="holo-grid">
+      <article class="holo" aria-labelledby="holo-t1">
+        <div class="holo-glow" aria-hidden="true"></div>
+        <div class="holo-glass">
+          <div class="holo-ui" aria-hidden="true">
+        <svg viewBox="0 0 240 132" aria-hidden="true" focusable="false">
+          <path class="ln soft" pathLength="100" style="--d:0" d="M10 10h220v112H10z"/>
+          <path class="ln gold" pathLength="100" style="--d:.06" d="M10 28V10h18M212 10h18v18M230 104v18h-18M28 122H10v-18"/>
+          <g>
+            <circle class="dt" cx="44" cy="38" r="1.8" style="--d:.08"/><circle class="dt" cx="80" cy="38" r="1.8" style="--d:.1"/><circle class="dt" cx="116" cy="38" r="1.8" style="--d:.12"/><circle class="dt" cx="152" cy="38" r="1.8" style="--d:.14"/><circle class="dt" cx="188" cy="38" r="1.8" style="--d:.16"/>
+            <circle class="dt" cx="44" cy="62" r="1.8" style="--d:.12"/><circle class="dt" cx="80" cy="62" r="1.8" style="--d:.14"/><circle class="dt" cx="116" cy="62" r="1.8" style="--d:.16"/><circle class="dt" cx="152" cy="62" r="1.8" style="--d:.18"/><circle class="dt" cx="188" cy="62" r="1.8" style="--d:.2"/>
+            <circle class="dt" cx="44" cy="86" r="1.8" style="--d:.16"/><circle class="dt" cx="80" cy="86" r="1.8" style="--d:.18"/><circle class="dt" cx="116" cy="86" r="1.8" style="--d:.2"/><circle class="dt" cx="152" cy="86" r="1.8" style="--d:.22"/><circle class="dt" cx="188" cy="86" r="1.8" style="--d:.24"/>
+          </g>
+          <path class="ln" pathLength="100" style="--d:.2" d="M26 108L62 92L98 98L134 70L170 78L206 46"/>
+          <path class="ln gold" pathLength="100" style="--d:.5" d="M197 46a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/>
+          <circle class="dt gold" cx="206" cy="46" r="3" style="--d:.45"/>
+          <path class="ln soft" pathLength="100" style="--d:.6" d="M212 38L224 26H232"/>
+          <rect class="scan" x="14" y="14" width="212" height="1.6" rx=".8"/>
+        </svg>
+          </div>
+          <div class="holo-txt">
+            <span class="holo-n" aria-hidden="true">01</span>
+            <h3 id="holo-t1">Diagnóstico</h3>
+            <p>Compreendemos o negócio, o público e o objetivo do projeto.</p>
+          </div>
+        </div>
+      </article>
+      <article class="holo" aria-labelledby="holo-t2">
+        <div class="holo-glow" aria-hidden="true"></div>
+        <div class="holo-glass">
+          <div class="holo-ui" aria-hidden="true">
+        <svg viewBox="0 0 240 132" aria-hidden="true" focusable="false">
+          <path class="ln soft" pathLength="100" style="--d:0" d="M10 10h220v112H10z"/>
+          <path class="ln" pathLength="100" style="--d:.1" d="M40 30C78 30 90 66 113 66"/>
+          <path class="ln" pathLength="100" style="--d:.16" d="M40 66H113"/>
+          <path class="ln" pathLength="100" style="--d:.22" d="M40 102C78 102 90 66 113 66"/>
+          <circle class="dt" cx="34" cy="30" r="4" style="--d:.06"/><circle class="dt" cx="34" cy="66" r="4" style="--d:.1"/><circle class="dt" cx="34" cy="102" r="4" style="--d:.14"/>
+          <path class="ln" pathLength="100" style="--d:.3" d="M122 57a9 9 0 1 0 0 18a9 9 0 1 0 0-18"/>
+          <circle class="dt gold" cx="122" cy="66" r="3.5" style="--d:.34"/>
+          <path class="ln gold" pathLength="100" style="--d:.45" d="M133 66H182M176 60L184 66L176 72"/>
+          <path class="ln soft" pathLength="100" style="--d:.55" d="M196 34h28v14h-28zM196 59h28v14h-28zM196 84h28v14h-28z"/>
+        </svg>
+          </div>
+          <div class="holo-txt">
+            <span class="holo-n" aria-hidden="true">02</span>
+            <h3 id="holo-t2">Estratégia</h3>
+            <p>Organizamos a mensagem, a estrutura e a experiência digital de acordo com a necessidade identificada.</p>
+          </div>
+        </div>
+      </article>
+      <article class="holo" aria-labelledby="holo-t3">
+        <div class="holo-glow" aria-hidden="true"></div>
+        <div class="holo-glass">
+          <div class="holo-ui" aria-hidden="true">
+        <svg viewBox="0 0 240 132" aria-hidden="true" focusable="false">
+          <path class="ln soft" pathLength="100" style="--d:0" d="M10 10h220v112H10z"/>
+          <g class="lay" style="--dx:-26px;--dy:16px"><path class="ln soft" pathLength="100" style="--d:.05" d="M28 44h122v62H28z"/></g>
+          <g class="lay" style="--dx:-14px;--dy:8px"><path class="ln soft" pathLength="100" style="--d:.1" d="M46 32h122v62H46z"/></g>
+          <g class="lay" style="--dx:0px;--dy:0px">
+            <path class="fl" d="M64 20h130v70H64z"/>
+            <path class="ln" pathLength="100" style="--d:.18" d="M64 20h130v70H64z"/>
+            <path class="ln soft" pathLength="100" style="--d:.3" d="M64 44h130M64 68h130M108 20v70M150 20v70"/>
+            <path class="ln" pathLength="100" style="--d:.38" d="M72 30h28M72 36h18"/>
+            <path class="ln gold" pathLength="100" style="--d:.5" d="M112 48h34v16h-34z"/>
+          </g>
+          <path class="ln soft" pathLength="100" style="--d:.6" d="M64 104h130M64 112h82"/>
+        </svg>
+          </div>
+          <div class="holo-txt">
+            <span class="holo-n" aria-hidden="true">03</span>
+            <h3 id="holo-t3">Desenvolvimento</h3>
+            <p>Construímos a solução com atenção à identidade visual, usabilidade, responsividade e desempenho.</p>
+          </div>
+        </div>
+      </article>
+      <article class="holo" aria-labelledby="holo-t4">
+        <div class="holo-glow" aria-hidden="true"></div>
+        <div class="holo-glass">
+          <div class="holo-ui" aria-hidden="true">
+        <svg viewBox="0 0 240 132" aria-hidden="true" focusable="false">
+          <path class="ln soft" pathLength="100" style="--d:0" d="M10 10h220v112H10z"/>
+          <path class="ln soft" pathLength="100" style="--d:.05" d="M10 28h220"/>
+          <circle class="dt" cx="22" cy="19" r="2.2" style="--d:.08"/><circle class="dt" cx="32" cy="19" r="2.2" style="--d:.1"/><circle class="dt" cx="42" cy="19" r="2.2" style="--d:.12"/>
+          <path class="ln soft" pathLength="100" style="--d:.1" d="M24 52h192"/>
+          <rect class="pgbar" x="24" y="50" width="192" height="4" rx="2"/>
+          <path class="ln soft" pathLength="100" style="--d:.2" d="M30 88H210"/>
+          <circle class="dt" cx="30" cy="88" r="5" style="--d:.25"/><circle class="dt" cx="90" cy="88" r="5" style="--d:.4"/><circle class="dt" cx="150" cy="88" r="5" style="--d:.55"/>
+          <path class="ln gold" pathLength="100" style="--d:.7" d="M205 88a5 5 0 1 0 10 0a5 5 0 1 0-10 0"/>
+          <path class="ln" pathLength="100" style="--d:.65" d="M30 110C90 120 160 114 214 102M207 97L215 102L206 106"/>
+        </svg>
+          </div>
+          <div class="holo-txt">
+            <span class="holo-n" aria-hidden="true">04</span>
+            <h3 id="holo-t4">Entrega e evolução</h3>
+            <p>Apresentamos o projeto, orientamos sua utilização e definimos os próximos passos conforme o escopo contratado.</p>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sobre">
+  <div class="wrap diff solo">
+    <div class="copy">
+      <h2>Tecnologia com intenção. Comunicação com propósito.</h2>
+      <p>Uma boa experiência digital não começa pelo efeito visual ou pela ferramenta utilizada. Começa pela compreensão do problema, pela clareza da mensagem e pela forma como cada elemento conduz o usuário.</p>
+      <p>A Mercurius Marketing busca unir estratégia, comunicação e desenvolvimento digital para construir soluções coerentes com os objetivos de cada negócio.</p>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section class="sec contact" id="contato">
+  <div class="wrap contact-grid">
+    <div class="copy">
+      <h2>Vamos construir sua próxima presença digital?</h2>
+      <p>Conte um pouco sobre o seu negócio e o que você deseja desenvolver. A partir dessas informações, podemos avaliar a necessidade e conversar sobre os próximos passos.</p>
+      <div class="direct" id="direct"></div>
+    </div>
+    <div class="igpanel">
+      <h3>O primeiro passo é uma conversa.</h3>
+      <p>Para começarmos com clareza, conte em poucas linhas:</p>
+      <ul class="brief">
+        <li>O que o seu negócio faz e para quem.</li>
+        <li>O que você quer desenvolver ou melhorar na sua presença digital.</li>
+        <li>Onde você quer que sua marca esteja daqui a alguns meses.</li>
+      </ul>
+      <p>Com essas informações, fazemos o diagnóstico e indicamos o caminho mais coerente para o seu projeto.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" data-ig-dm target="_blank" rel="noopener noreferrer" href="#contato">Começar o diagnóstico do meu projeto</a>
+      </div>
+      <p class="fine">Você será levado ao Instagram @mercurius_marketing.</p>
+      <p class="note" id="ctaNote" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="logo-mercurius.webp" alt="Mercurius Marketing" width="96" height="96"><div class="nm">Mercurius Marketing</div></div>
+      <ul aria-label="Navegação secundária">
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <ul aria-label="Contato e legal">
+        <li><a data-ig target="_blank" rel="noopener noreferrer" href="#contato">Instagram @mercurius_marketing</a></li>
+        <li><a href="mailto:market.mercurius@gmail.com">market.mercurius@gmail.com</a></li>
+        <li><a href="privacidade.html">Política de privacidade</a></li>
+      </ul>
+    </div>
+    <p class="copy-r">© <span id="year"></span> Mercurius Marketing. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="dia.js"></script>
+<!-- GSAP + ScrollTrigger (CDN, versão fixa). Se falharem, a sequência usa um fallback com position:sticky. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="sequence.js"></script>
+<script src="scroll.js"></script>
+</body>
+</html>
